@@ -1,2 +1,0 @@
-# LinuxAI
-LINUXAI
