@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoatMaktab47</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+        .clock {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            border: 10px solid white;
+            border-radius: 50%;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+            background: radial-gradient(circle, #222, #111);
+        }
+        .clock .center {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: white;
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 10;
+        }
+        .hand {
+            position: absolute;
+            width: 50%;
+            height: 2px;
+            background: white;
+            top: 50%;
+            transform-origin: 100%;
+            transform: rotate(90deg);
+            transition: all 0.05s ease-in-out;
+        }
+        .hour {
+            width: 35%;
+            height: 4px;
+        }
+        .digital-clock {
+            margin-top: 20px;
+            font-size: 24px;
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="clock">
+            <div class="center"></div>
+            <div class="hand hour" id="hour-hand"></div>
+            <div class="hand minute" id="minute-hand"></div>
+            <div class="hand second" id="second-hand"></div>
+        </div>
+        <div class="digital-clock" id="digital-clock"></div>
+    </div>
+
+    <script>
+        function updateClock() {
+            const now = new Date();
+
+            const hours = now.getHours();
+            const minutes = now.getMinutes();
+            const seconds = now.getSeconds();
+
+            // Analog Clock
+            const hourDeg = (hours % 12) * 30 + (minutes / 2);
+            const minuteDeg = minutes * 6;
+            const secondDeg = seconds * 6;
+
+            document.getElementById('hour-hand').style.transform = `rotate(${hourDeg}deg)`;
+            document.getElementById('minute-hand').style.transform = `rotate(${minuteDeg}deg)`;
+            document.getElementById('second-hand').style.transform = `rotate(${secondDeg}deg)`;
+
+            // Digital Clock
+            const formattedTime = `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+            document.getElementById('digital-clock').textContent = formattedTime;
+        }
+
+        setInterval(updateClock, 1000);
+        updateClock();
+    </script>
+</body>
+</html>
