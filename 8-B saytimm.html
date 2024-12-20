@@ -1,0 +1,142 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8-B sinif legenda</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #7ef, #faf);
+            color: white;
+            overflow-x: hidden;
+        }
+        nav {
+            position: sticky;
+            top: 0;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 20px;
+            transition: background 0.3s;
+        }
+        nav a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        section {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px 20px;
+        }
+        section:nth-child(even) {
+            background: rgba(255, 255, 255, 0.1);
+        }
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+        button {
+            display: inline-block;
+            padding: 15px 30px;
+            background: linear-gradient(45deg, #58c, #feb3);
+            color: white;
+            text-transform: uppercase;
+            font-weight: bold;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            margin-top: 20px;
+        }
+        button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            color: rgba(255, 255, 255, 0.7);
+        }
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <a href="#home">Bosh sahifa</a>
+        <a href="#about">O'zim haqimizda</a>
+        <a href="#services">Xizmatlar</a>
+        <a href="#contact">Bog'lanish uchun</a>
+    </nav>
+
+    <!-- Sections -->
+    <section id="home">
+        <div>
+            <h1>Bosh sahifa</h1>
+            <p>Mening saytimda sizga kerakli barcha malumot bor </p>
+            <button>Batafsil</button>
+        </div>
+    </section>
+
+    <section id="about">
+        <div>
+            <h1>O'zim haqimda </h1>
+            <p>Men samarqan tuman47-Maktab o'quvchisi man meni  yoshim 14da 8-B sinifda o'qiyman .</p>
+            <button>Ko'proq malumot!</button>
+        </div>
+    </section>
+
+    <section id="services">
+        <div>
+            <h1>Xizmatlar</h1>
+            <p>Hozircha xizmatlar bo'limi ishlamaydi uzur kechirasiz .</p>
+            <button>Xizmatlarni ko'rish</button>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div>
+            <h1>Aloqa</h1>
+            <p>Biz bilan bog'lanish uchun quyidagi tugmani bosing Yoki (+998 9* 335 19 1*) raqamiga telefon qiling.</p>
+            <button>Biz bilan bog'laning</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Mening barcha huquqlarim himoyalangan | <a href="#">Maxfiylik siyosati</a></p>
+    </footer>
+</body>
+</html>
